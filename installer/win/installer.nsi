@@ -42,7 +42,4 @@ Section "Upgrade Jython"
     Rename jython.jar jython.jar.old
     Rename jythonlib.jar jythonlib.jar.old
     File ..\..\jar\sys\*.jar
-
-    SetOutPath $PROFILE
-    File ..\..\config\.jython
 SectionEnd
