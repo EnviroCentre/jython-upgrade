@@ -12,7 +12,8 @@ The latest available release of HEC-DSSVue (2.0.1.16, February 2010) includes
 Jython version 2.2.1. This version of Jython can be upgraded to the most recent
 version using the installer included in this repository.
 
-See `the release page </EnviroCentre/jython-upgrade/releases/latest>`_ for the
+See `the release page 
+<https://github.com/EnviroCentre/jython-upgrade/releases/latest>`_ for the
 Windows installer.
 
 Terms & Conditions
