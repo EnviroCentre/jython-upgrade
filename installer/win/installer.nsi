@@ -34,12 +34,14 @@ Section "Upgrade Jython"
     SetOutPath $INSTDIR
     File "..\..\config\HEC-DSSVue.config"
 
-    SetOutPath $INSTDIR\jython
-    File "..\..\jython\*.*"
+    SetOutPath "$INSTDIR\jython"
+    File /r "..\..\jython\*.*"
 
-    SetOutPath $INSTDIR\jar\sys
+    SetOutPath "$INSTDIR\jar\sys"
+    Rename jython.jar jython.jar.old
+    Rename jythonlib.jar jythonlib.jar.old
     File "..\..\jar\sys\*.jar"
 
     SetOutPath $PROFILE
-    File ".jython"
+    File "..\..\config\.jython"
 SectionEnd
