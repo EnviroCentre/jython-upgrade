@@ -30,7 +30,7 @@ RequestExecutionLevel highest
 ; Language settings
 !insertmacro MUI_LANGUAGE "English"
 
-Section "Upgrade Jython"
+Section "Upgrade to Jython 2.7.0"
     SetOutPath $INSTDIR
     Rename HEC-DSSVue.config HEC-DSSVue.config.old
     File ..\..\config\HEC-DSSVue.config
@@ -43,4 +43,10 @@ Section "Upgrade Jython"
     Rename jython.jar jython.jar.old
     Rename jythonlib.jar jythonlib.jar.old
     File ..\..\jar\sys\*.jar
+SectionEnd
+
+Section "Upgrade to Java 1.8.0_45"
+    RMDir /r $INSTDIR\java
+    SetOutPath $INSTDIR\java
+    File /r ..\..\java\*.*
 SectionEnd
