@@ -35,6 +35,7 @@ Section "Upgrade Jython"
     Rename HEC-DSSVue.config HEC-DSSVue.config.old
     File ..\..\config\HEC-DSSVue.config
 
+    RMDir /r $INSTDIR\jython
     SetOutPath $INSTDIR\jython
     File /r ..\..\jython\*.*
 
