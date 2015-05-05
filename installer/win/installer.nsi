@@ -47,6 +47,11 @@ SectionEnd
 
 Section "Upgrade to Java 1.8.0_45"
     RMDir /r $INSTDIR\java
+    
     SetOutPath $INSTDIR\java
+    ; Some *.ttf files cannot be deleted and cannot be overwritten
+    ; we'll just skip over it.
+    SetOverwrite try
     File /r ..\..\java\*.*
+    SetOverwrite on
 SectionEnd
