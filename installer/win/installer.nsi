@@ -1,3 +1,5 @@
+; requires http://nsis.sourceforge.net/AccessControl_plug-in
+
 !include MUI2.nsh
 
 !define APP_NAME "Jython upgrade for HEC-DSSVue"
@@ -39,10 +41,14 @@ Section "Upgrade to Jython 2.7.0"
     SetOutPath $INSTDIR\jython
     File /r ..\..\jython\*.*
 
+    ; So we can allow compiling from *.py to *$py.class
+    AccessControl::GrantOnFile "$INSTDIR\jython\lib" "(BU)" "FullAccess"
+
     SetOutPath $INSTDIR\jar\sys
     Rename jython.jar jython.jar.old
     Rename jythonlib.jar jythonlib.jar.old
     File ..\..\jar\sys\*.jar
+    
 SectionEnd
 
 Section "Upgrade to Java 1.8.0_45"
