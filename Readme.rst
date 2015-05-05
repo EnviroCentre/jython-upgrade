@@ -10,11 +10,18 @@ Army Corps of Engineers (USACE).
 
 The latest available release of HEC-DSSVue (2.0.1.16, February 2010) includes
 Jython version 2.2.1. This version of Jython can be upgraded to the most recent
-version using the installer included in this repository.
+version using the upgrade package (see table below). To support Jython 2.7, an 
+upgrade of the Java shipped with HEC-DSSVue is also required (and included in 
+the upgrade package!). 
 
-See `the release page 
-<https://github.com/EnviroCentre/jython-upgrade/releases/latest>`_ for the
-Windows installer.
+=================================================================================== ============ ====================
+Upgrade package                                                                     Java version Jython version
+=================================================================================== ============ ====================
+None (HEC-DSSVue out of the box)                                                    1.6          2.2.1 (October 2007) 
+`Release 1.0 <https://github.com/EnviroCentre/jython-upgrade/releases/tag/v1.0.1>`_ 1.6          2.5.3 (August 2012)
+`Release 1.1 <https://github.com/EnviroCentre/jython-upgrade/releases/latest>`_     1.8.0_45     2.7.0 (May 2015)
+=================================================================================== ============ ====================
+
 
 Terms & Conditions
 ------------------
@@ -22,8 +29,12 @@ Terms & Conditions
 Jython: Copyright Python Software Foundation (`Python Software Foundation
 license version 2 <LICENCE_Jython>`_)
 
+Java: Copyright Oracle and/or its licensors (`Oracle Binary Code License 
+Agreement for the Java SE Platform Products and JavaFX 
+<http://java.com/license>`_)
+
 HEC-DSSVue: Copyright Hydrologic Engineering Centre (`Terms and Conditions for
-Use of HEC-DSSVue <Terms_HEC-DSSVue>`_)
+Use of HEC-DSSVue <LICENSE_HEC-DSSVue>`_)
 
 All other code and content: Copyright EnviroCentre, published under the `MIT
 licence <LICENSE>`_. EnviroCentre is not affiliated with the HEC, IWR or

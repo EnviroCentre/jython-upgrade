@@ -1,3 +1,5 @@
+; requires http://nsis.sourceforge.net/AccessControl_plug-in
+
 !include MUI2.nsh
 
 !define APP_NAME "Jython upgrade for HEC-DSSVue"
@@ -30,16 +32,32 @@ RequestExecutionLevel highest
 ; Language settings
 !insertmacro MUI_LANGUAGE "English"
 
-Section "Upgrade Jython"
+Section "Upgrade to Jython 2.7.0"
     SetOutPath $INSTDIR
     Rename HEC-DSSVue.config HEC-DSSVue.config.old
     File ..\..\config\HEC-DSSVue.config
 
+    RMDir /r $INSTDIR\jython
     SetOutPath $INSTDIR\jython
     File /r ..\..\jython\*.*
+
+    ; So we can allow compiling from *.py to *$py.class
+    AccessControl::GrantOnFile "$INSTDIR\jython\lib" "(BU)" "FullAccess"
 
     SetOutPath $INSTDIR\jar\sys
     Rename jython.jar jython.jar.old
     Rename jythonlib.jar jythonlib.jar.old
     File ..\..\jar\sys\*.jar
+    
+SectionEnd
+
+Section "Upgrade to Java 1.8.0_45"
+    RMDir /r $INSTDIR\java
+    
+    SetOutPath $INSTDIR\java
+    ; Some *.ttf files cannot be deleted and cannot be overwritten
+    ; we'll just skip over it.
+    SetOverwrite try
+    File /r ..\..\java\*.*
+    SetOverwrite on
 SectionEnd
