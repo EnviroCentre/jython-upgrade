@@ -34,6 +34,10 @@ Terms & Conditions
 Jython: Copyright Python Software Foundation (`Python Software Foundation
 license version 2 <LICENCE_Jython>`_)
 
+Java: Copyright Oracle and/or its licensors (`Oracle Binary Code License 
+Agreement for the Java SE Platform Products and JavaFX 
+<http://java.com/license>`_)
+
 HEC-DSSVue: Copyright Hydrologic Engineering Centre (`Terms and Conditions for
 Use of HEC-DSSVue <Terms_HEC-DSSVue>`_)
 
