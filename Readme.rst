@@ -14,17 +14,13 @@ version using the upgrade package (see table below). To support Jython 2.7, an
 upgrade of the Java shipped with HEC-DSSVue is also required (and included in 
 the upgrade package!). 
 
-================================ ============ ====================
-Upgrade package                  Java version Jython version
-================================ ============ ====================
-None (HEC-DSSVue out of the box) 1.6          2.2.1 (October 2007) 
-1.0                              1.6          2.5.3 (August 2012)
-1.1                              1.8.0_45     2.7.0 (May 2015)
-================================ ============ ====================
-
-See `the release page 
-<https://github.com/EnviroCentre/jython-upgrade/releases/latest>`_ for the
-Windows installer.
+=================================================================================== ============ ====================
+Upgrade package                                                                     Java version Jython version
+=================================================================================== ============ ====================
+None (HEC-DSSVue out of the box)                                                    1.6          2.2.1 (October 2007) 
+`Release 1.0 <https://github.com/EnviroCentre/jython-upgrade/releases/tag/v1.0.1>`_ 1.6          2.5.3 (August 2012)
+`Release 1.1 <https://github.com/EnviroCentre/jython-upgrade/releases/latest>`_     1.8.0_45     2.7.0 (May 2015)
+=================================================================================== ============ ====================
 
 
 Terms & Conditions
