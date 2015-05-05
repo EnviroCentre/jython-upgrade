@@ -39,7 +39,7 @@ Agreement for the Java SE Platform Products and JavaFX
 <http://java.com/license>`_)
 
 HEC-DSSVue: Copyright Hydrologic Engineering Centre (`Terms and Conditions for
-Use of HEC-DSSVue <Terms_HEC-DSSVue>`_)
+Use of HEC-DSSVue <LICENSE_HEC-DSSVue>`_)
 
 All other code and content: Copyright EnviroCentre, published under the `MIT
 licence <LICENSE>`_. EnviroCentre is not affiliated with the HEC, IWR or
