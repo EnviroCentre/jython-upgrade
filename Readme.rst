@@ -10,11 +10,23 @@ Army Corps of Engineers (USACE).
 
 The latest available release of HEC-DSSVue (2.0.1.16, February 2010) includes
 Jython version 2.2.1. This version of Jython can be upgraded to the most recent
-version using the installer included in this repository.
+version using the upgrade package (see table below). To support Jython 2.7, an 
+upgrade of the Java shipped with HEC-DSSVue is also required (and included in 
+the upgrade package!). 
+
+================ ============ ====================
+Upgrade package  Java version Jython version
+================ ============ ====================
+None (HEC-DSSVue 1.6          2.2.1 (October 2007) 
+out of the box) 
+1.0              1.6          2.5.3 (August 2012)
+1.1              1.8.0_45     2.7.0 (May 2015)
+================ ============ ====================
 
 See `the release page 
 <https://github.com/EnviroCentre/jython-upgrade/releases/latest>`_ for the
 Windows installer.
+
 
 Terms & Conditions
 ------------------
