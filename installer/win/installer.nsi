@@ -1,5 +1,3 @@
-; requires http://nsis.sourceforge.net/AccessControl_plug-in
-
 !include MUI2.nsh
 
 !define APP_NAME "Jython upgrade for HEC-DSSVue"
