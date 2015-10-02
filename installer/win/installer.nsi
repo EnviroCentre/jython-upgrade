@@ -48,16 +48,21 @@ Section "Upgrade to Jython 2.7.0"
     Rename jython.jar jython.jar.old
     Rename jythonlib.jar jythonlib.jar.old
     File ..\..\jar\sys\*.jar
-    
+
 SectionEnd
 
 Section "Upgrade to Java 1.8.0_45"
     RMDir /r $INSTDIR\java
-    
+
     SetOutPath $INSTDIR\java
     ; Some *.ttf files cannot be deleted and cannot be overwritten
     ; we'll just skip over it.
     SetOverwrite try
     File /r ..\..\java\*.*
     SetOverwrite on
+SectionEnd
+
+Section "Repair .dss file association"
+    ; Fixes https://github.com/EnviroCentre/jython-upgrade/issues/2
+    DeleteRegValue HKCR "dssfile\shell\Open\command" "command"
 SectionEnd
